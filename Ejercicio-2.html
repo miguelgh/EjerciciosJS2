@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        textarea{
+            resize: none;
+        }
+    </style>
+    <script>
+        function contar(){
+            const texto = document.getElementById('texto').value;
+            let resp = document.getElementById('respuesta');
+
+            console.log(texto);
+            
+            let num = texto.length;
+            console.log(num);
+
+            resp.innerText = num;
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 2 JS</h1>
+    <p>Programar un contador de caracteres para un textarea.</p>
+        <hr>
+        <fieldset>
+            <form action="#" method="post">
+                <label for="texto">Ingrese texto</label><br>
+                <textarea name="texto" id="texto" cols="30" rows="10"></textarea><br>
+                <input type="button" value="Enviar" onclick="contar()">
+            </form>
+        </fieldset>
+        <p>Ingresaste <span id="respuesta"></span></p>       
+</body>
+</html>

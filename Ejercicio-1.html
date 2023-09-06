@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 JS</title>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+    }
+    .cambios{
+        display: flex;
+        gap: 10px;
+    }
+    .cuadrado{
+        width: 70px;
+        height: 70px;
+        padding: 3px;
+        border-radius:10%;
+        background-color: rgb(230, 230, 230);
+        font-size: 12px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .cuadrado:hover{
+        box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.3);
+    }
+    .medio{
+        background-color: rgb(200, 200, 200);
+    }
+    .oscuro{
+        background-color: rgb(45, 45, 45);
+        color: white;
+    }
+    .bodyOscuro{
+        background-color: rgb(45, 45, 45);
+        color: white;
+    }
+</style>
+
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <p>Crear un documento html con 3 cuadrados que, al ser clickeados, 
+        cambien el color de fondo del documento. Cada cuadrado debera 
+        tener un color distinto.</p>
+    <hr>
+    <div class="cambios">
+        <div class="cuadrado" id="claro">Gris claro</div>
+        <div class="cuadrado medio" id="medio">Gris medio</div>
+        <div class="cuadrado oscuro" id="oscuro">modo oscuro</div>
+    </div>
+
+    <script>
+        const body = document.querySelector("body");
+        const claro = document.getElementById("claro");
+        const medio = document.getElementById("medio");
+        const oscuro = document.getElementById("oscuro");
+        const cuadrado = document.getElementsByClassName('cuadrado');
+
+        claro.addEventListener('click', function(){
+            body.style.background = 'rgb(230, 230, 230)';
+            body.style.color = 'black';
+        });
+        
+        medio.addEventListener('click', function(){
+            body.style.background = 'rgb(200, 200, 200)';
+            body.style.color = 'black';
+        });
+
+        oscuro.addEventListener('click', function(){
+            body.style = 'background-color: rgb(45, 45, 45); color: rgb(230, 230, 230);';   
+            
+            cuadrado[0].style.color = 'black';
+            cuadrado[1].style.color = 'black';
+            
+        });
+    </script>
+</body>
+</html>
